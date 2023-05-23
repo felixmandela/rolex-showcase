@@ -30,12 +30,13 @@ $secondary-color-2: #828282;
     color: $text-color
 }
 
-body,
-main {
-    min-height: 100vh;
-    overflow: scroll;
-    scroll-behavior: smooth;
 
+body,
+html {
+    scroll-behavior: smooth;
+    color: #111;
+    background-color: #fdfdfd;
+    min-height: 100vh;
 }
 
 
@@ -52,6 +53,10 @@ main {
     }
 }
 
+.section {
+    height: auto;
+    width: auto;
+}
 
 .section-link {
     text-decoration: none;
@@ -59,7 +64,10 @@ main {
     display: block;
     color: $border-color;
     height: auto;
+    transition: color 0.4s ease;
+    padding: 15px 0;
 }
+
 
 
 main {
@@ -77,5 +85,7 @@ footer {
 }
 
 .active {
-    color: #111
+    color: #111;
+    transition: color 1s ease, transform 0.5s ease;
+    transform: scale(1.1);
 }

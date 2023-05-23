@@ -7,10 +7,11 @@
 }
 
 body,
-main {
-  min-height: 100vh;
-  overflow: scroll;
+html {
   scroll-behavior: smooth;
+  color: #111;
+  background-color: #fdfdfd;
+  min-height: 100vh;
 }
 
 .disable-scrollbars {
@@ -25,12 +26,19 @@ main {
   width: 0px;
 }
 
+.section {
+  height: auto;
+  width: auto;
+}
+
 .section-link {
   text-decoration: none;
   font-size: 6rem;
   display: block;
   color: #e8e8e8;
   height: auto;
+  transition: color 0.4s ease;
+  padding: 15px 0;
 }
 
 main {
@@ -50,4 +58,6 @@ footer {
 
 .active {
   color: #111;
+  transition: color 1s ease, transform 0.5s ease;
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
