@@ -1,6 +1,6 @@
-const header = document.getElementById("header");
+const main = document.getElementById("main");
 const linkHeader = document.getElementById("link-container");
-header.addEventListener("scroll", getNewSection);
+main.addEventListener("scroll", getNewSection);
 
 function getNewSection() {
     const body = document.getElementById("body")
@@ -13,7 +13,7 @@ function getNewSection() {
     const bgColor = document.getElementsByClassName("bg-color");
     const textColor = document.getElementsByClassName("text-color");
     const centerScreen = window.innerHeight / 2;
-    const pageOffset = header.scrollTop + window.innerHeight;
+    const pageOffset = main.scrollTop + window.innerHeight;
     const firstLinkOffset = window.innerHeight - firstLink.offsetTop;
 
     if (pageOffset - 10 < firstLinkOffset) {
@@ -62,7 +62,7 @@ function getNewSection() {
 
 
 function startScroll() {
-    header.scrollTo(0, 30)
+    main.scrollTo(0, 30)
 }
 
 window.onload = startScroll;

@@ -63,7 +63,7 @@ li {
     }
 }
 
-header {
+main {
     position: fixed;
     top: 0;
     left: 0;
@@ -127,9 +127,8 @@ footer p {
 
 .active {
     // color: #111;
-    transform: scale(1.05);
-    transform-origin: left;
     transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
+    font-size: 5.5rem;
 }
 
 
