@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font: 300 16px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 700 16px "Barlow Condensed", sans-serif;
   color: #111;
 }
 
@@ -12,6 +12,15 @@ html {
   color: #111;
   background-color: #fdfdfd;
   min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  transition: background-color 0.5s ease;
+}
+
+li {
+  list-style: none;
 }
 
 .disable-scrollbars {
@@ -26,38 +35,82 @@ html {
   width: 0px;
 }
 
-.section {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: center;
+  height: 100%;
+  width: 40%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  padding-left: 30px;
+}
+
+.link-wrapper {
   height: auto;
   width: auto;
 }
 
-.section-link {
+.header-link {
   text-decoration: none;
-  font-size: 6rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+  line-height: 90%;
+  font-weight: bold;
   display: block;
   color: #e8e8e8;
   height: auto;
-  transition: color 0.4s ease;
-  padding: 15px 0;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
+  cursor: default;
 }
 
 footer {
   height: 30px;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 20px;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #e8e8e8;
 }
 
 .active {
-  color: #111;
-  transition: color 1s ease, transform 0.5s ease;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transform-origin: left;
+  transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
+}
+
+.hide {
+  display: none;
+}
+
+.image-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  padding: 20px 20px 40px;
+  transition: opacity 1s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 70%;
+  width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=style.css.map */

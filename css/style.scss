@@ -1,4 +1,5 @@
-$font-stack: 300 16px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-1: 600 16px 'Archivo Narrow', sans-serif;
+$font-family-2: 700 16px 'Barlow Condensed', sans-serif;
 $text-color: #111;
 $background-color: #fdfdfd;
 $border-color: #e8e8e8;
@@ -26,7 +27,7 @@ $secondary-color-2: #828282;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font: $font-stack;
+    font: $font-family-2;
     color: $text-color
 }
 
@@ -37,6 +38,15 @@ html {
     color: #111;
     background-color: #fdfdfd;
     min-height: 100vh;
+    width: 100%;
+    position: relative;
+    @include flexbox(row);
+    transition: background-color 0.5s ease;
+}
+
+
+li {
+    list-style: none;
 }
 
 
@@ -53,39 +63,98 @@ html {
     }
 }
 
-.section {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flexbox(column);
+    align-items: start;
+    align-content: center;
+    height: 100%;
+    width: 40%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-left: 30px;
+}
+
+.link-wrapper {
     height: auto;
     width: auto;
 }
 
-.section-link {
+.header-link {
     text-decoration: none;
-    font-size: 6rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 90%;
+    font-weight: bold;
     display: block;
     color: $border-color;
     height: auto;
-    transition: color 0.4s ease;
-    padding: 15px 0;
+    transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
+    cursor: default;
 }
 
 
 
-main {
-    @include flexbox(column);
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
+// main {
+//     width: calc(100% - 40%);
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     @include flexbox(column);
+//     height: 100%;
+//     overflow: scroll;
+//     scroll-behavior: smooth;
+//     padding: 40px;
+// }
+
+
+
 
 footer {
     height: 30px;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 5px;
+    right: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: $border-color;
 }
 
 .active {
-    color: #111;
-    transition: color 1s ease, transform 0.5s ease;
-    transform: scale(1.1);
+    // color: #111;
+    transform: scale(1.05);
+    transform-origin: left;
+    transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.image-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    padding: 20px 20px 40px;
+    transition: opacity 1s ease;
+    opacity: 0;
+    @include flexbox(row);
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 70%;
+    width: 70%;
+    object-fit: cover;
+    object-position: center;
 }

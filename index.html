@@ -11,96 +11,239 @@
     <meta name="robots" content="index, follow">
     <title>Felix Mandela - Personal Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/cac5f5b001.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Barlow+Condensed:wght@100;200;300;400;700&display=swap"
+        rel="stylesheet">
     <script src="app.js" defer></script>
+
 </head>
 
-<body>
-    <main id="main">
+<body id="body">
+    <header id="header" class="disable-scrollbars">
+        <ul id="link-container">
+            <li class="link-wrapper">
+                <p class="header-link">datejust</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/datejust.avif" alt="">
+                    <span class="bg-color hide">#395a40</span>
+                    <span class="text-color hide">#a4ccae</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">submariner</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/submariner.avif" alt="">
+                    <span class="bg-color hide">#303032</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">GMT-master II</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/gmt-master-ii.avif" alt="">
+                    <span class="bg-color hide">#826947</span>
+                    <span class="text-color hide">#f7e5c3</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Day-date</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/daydate.avif" alt="">
+                    <span class="bg-color hide">#193356</span>
+                    <span class="text-color hide">#8eacdf</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Cosmograph Daytona</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/cosmograph-daytona.avif" alt="">
+                    <span class="bg-color hide">#1c3357</span>
+                    <span class="text-color hide">#8eacdf</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Oyster Perpetual</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/oyster-perpetual.avif" alt="">
+                    <span class="bg-color hide">#898a89</span>
+                    <span class="text-color hide">#cccccc</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Yacht-master</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/yacht-master.avif" alt="">
+                    <span class="bg-color hide">#313134</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Sea-dweller</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/sea-dweller.avif" alt="">
+                    <span class="bg-color hide">#856b49</span>
+                    <span class="text-color hide">#f7e5c3</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Air-King</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/air-king.avif" alt="">
+                    <span class="bg-color hide">#2d2d2f</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Explorer</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/the-explorer.avif" alt="">
+                    <span class="bg-color hide">#846b48</span>
+                    <span class="text-color hide">#f7e5c3</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Lady-Datejust</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/lady-datejust.avif" alt="">
+                    <span class="bg-color hide">#845546</span>
+                    <span class="text-color hide">#e7c3b6</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Sky-dweller</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/sky-dweller.avif" alt="">
+                    <span class="bg-color hide">#303032</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">1908</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/1908.avif" alt="">
+                    <span class="bg-color hide">#ada288</span>
+                    <span class="text-color hide">#f1e6cb</span>
+                </div>
+            </li>
 
-        <section id="about-me" class="section">
-            <p class="section-link" href="">
-                About Me
-            </p>
-        </section>
-        <section id="portfolio" class="section">
-            <p class="section-link" href="">
-                Portfolio
-            </p>
-        </section>
-        <section id="timeline" class="section">
-            <p class="section-link" href="">
-                Timeline
-            </p>
-        </section>
-        <section id="testimonial" class="section">
-            <p class="section-link" href="">
-                Testimonial
-            </p>
-        </section>
-        <section id="contact" class="section">
-            <p class="section-link" href="">
-                Contact
-            </p>
-        </section>
+            <li class="link-wrapper">
+                <p class="header-link">datejust</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/datejust.avif" alt="">
+                    <span class="bg-color hide">#395a40</span>
+                    <span class="text-color hide">#a4ccae</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">submariner</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/submariner.avif" alt="">
+                    <span class="bg-color hide">#303032</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">GMT-master II</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/gmt-master-ii.avif" alt="">
+                    <span class="bg-color hide">#826947</span>
+                    <span class="text-color hide">#f7e5c3</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Day-date</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/daydate.avif" alt="">
+                    <span class="bg-color hide">#193356</span>
+                    <span class="text-color hide">#8eacdf</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Cosmograph Daytona</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/cosmograph-daytona.avif" alt="">
+                    <span class="bg-color hide">#1c3357</span>
+                    <span class="text-color hide">#8eacdf</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Oyster Perpetual</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/oyster-perpetual.avif" alt="">
+                    <span class="bg-color hide">#898a89</span>
+                    <span class="text-color hide">#cccccc</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Yacht-master</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/yacht-master.avif" alt="">
+                    <span class="bg-color hide">#313134</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Sea-dweller</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/sea-dweller.avif" alt="">
+                    <span class="bg-color hide">#856b49</span>
+                    <span class="text-color hide">#f7e5c3</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Air-King</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/air-king.avif" alt="">
+                    <span class="bg-color hide">#2d2d2f</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Explorer</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/the-explorer.avif" alt="">
+                    <span class="bg-color hide">#846b48</span>
+                    <span class="text-color hide">#f7e5c3</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Lady-Datejust</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/lady-datejust.avif" alt="">
+                    <span class="bg-color hide">#845546</span>
+                    <span class="text-color hide">#e7c3b6</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">Sky-dweller</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/sky-dweller.avif" alt="">
+                    <span class="bg-color hide">#303032</span>
+                    <span class="text-color hide">#a4a4b1</span>
+                </div>
+            </li>
+            <li class="link-wrapper">
+                <p class="header-link">1908</p>
+                <div class="image-container">
+                    <img class="image" src="Assets/image/1908.avif" alt="">
+                    <span class="bg-color hide">#ada288</span>
+                    <span class="text-color hide">#f1e6cb</span>
+                </div>
+            </li>
 
+        </ul>
+    </header>
 
-        <section id="about-me" class="section">
-            <p class="section-link" href="">
-                About Me
-            </p>
-        </section>
-        <section id="portfolio" class="section">
-            <p class="section-link" href="">
-                Portfolio
-            </p>
-        </section>
-        <section id="timeline" class="section">
-            <p class="section-link" href="">
-                Timeline
-            </p>
-        </section>
-        <section id="testimonial" class="section">
-            <p class="section-link" href="">
-                Testimonial
-            </p>
-        </section>
-        <section id="contact" class="section">
-            <p class="section-link" href="">
-                Contact
-            </p>
-        </section>
+    <main>
 
-
-        <section id="about-me" class="section">
-            <p class="section-link" href="">
-                About Me
-            </p>
-        </section>
-        <section id="portfolio" class="section">
-            <p class="section-link" href="">
-                Portfolio
-            </p>
-        </section>
-        <section id="timeline" class="section">
-            <p class="section-link" href="">
-                Timeline
-            </p>
-        </section>
-        <section id="testimonial" class="section">
-            <p class="section-link" href="">
-                Testimonial
-            </p>
-        </section>
-        <section id="contact" class="section">
-            <p class="section-link" href="">
-                Contact
-            </p>
-        </section>
     </main>
-    <!-- 
+
     <footer>
-        <p id="copyright">&copy; 2023 Felix Mandela. All rights reserved.</p>
-    </footer> -->
+        <p id="copyright">Made with &hearts; by Felix Mandela.</p>
+    </footer>
 </body>
 
 </html>
