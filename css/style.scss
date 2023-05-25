@@ -194,8 +194,6 @@ footer {
         text-transform: uppercase;
         margin-bottom: 100px;
 
-
-
         @include mqmax(1024px) {
             font-size: 4rem;
         }
