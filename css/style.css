@@ -163,6 +163,26 @@ footer a {
   text-transform: uppercase;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1024px) {
+  #landing-screen h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #landing-screen h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 625px) {
+  #landing-screen h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  #landing-screen h1 {
+    font-size: 2rem;
+  }
+}
 #landing-screen #mouse {
   width: 3rem;
   height: 5rem;
