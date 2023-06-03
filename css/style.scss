@@ -1,70 +1,52 @@
-$font-family-1: 600 16px 'Archivo Narrow', sans-serif;
-$font-family-2: 700 16px 'Barlow Condensed', sans-serif;
-$text-color: #111;
-$background-color: #fdfdfd;
-$border-color: #e8e8e8;
-$secondary-color-1: #e4e4e4;
-$secondary-color-2: #828282;
-
-@mixin flexbox($direction) {
-    display: flex;
-    flex-direction: $direction;
-
-}
-
-@mixin transition($style) {
-    transition: $style 0.2s ease;
-
-}
-
-@mixin mqmax($width) {
-    @media screen and (max-width: $width) {
-        @content;
-    }
-}
+$font-family: "Barlow Condensed", sans-serif;
+$color-primary: #111;
+$color-secondary: #e8e8e8;
+$color-background: #fdfdfd;
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font: $font-family-2;
-    color: $text-color
+    font: 700 16px $font-family;
+    color: $color-primary;
 }
-
 
 body,
 html {
     scroll-behavior: smooth;
-    color: $text-color;
-    background-color: $background-color;
+    color: $color-primary;
+    background-color: $color-background;
     min-height: 100vh;
     width: 100%;
     position: relative;
-    @include flexbox(row);
+    display: flex;
+    flex-direction: row;
     transition: background-color 0.5s ease;
 }
 
-
+/* List Items */
 li {
     list-style: none;
 }
 
-
+/* Scrollbars */
 .disable-scrollbars {
     scrollbar-width: none;
     /* Firefox */
     -ms-overflow-style: none;
     /* IE 10+ */
-
-    &::-webkit-scrollbar {
-        background: transparent;
-        /* Chrome/Safari/Webkit */
-        width: 0px;
-    }
 }
 
+.disable-scrollbars::-webkit-scrollbar {
+    background: transparent;
+    /* Chrome/Safari/Webkit */
+    width: 0px;
+}
+
+/* Main Section */
 main {
-    @include flexbox(column);
+    display: flex;
+    flex-direction: column;
     align-items: start;
     align-content: center;
     width: 40%;
@@ -73,89 +55,87 @@ main {
     opacity: 0;
     transition: opacity 1s ease 1s;
 
-    @include mqmax(625px) {
+    @media screen and (max-width: 625px) {
         width: 100%;
         align-items: center;
         text-align: center;
         padding: 0;
     }
+}
 
-    .link-wrapper {
-        height: auto;
-        width: auto;
+/* Watch Items */
+.watch-item {
+    height: auto;
+    width: auto;
+}
 
+.watch-name {
+    text-decoration: none;
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 90%;
+    font-weight: bold;
+    display: block;
+    color: $color-secondary;
+    height: auto;
+    transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
+    cursor: default;
 
-        .header-link {
-            text-decoration: none;
-            font-size: 5rem;
-            text-transform: uppercase;
-            line-height: 90%;
-            font-weight: bold;
-            display: block;
-            color: $border-color;
-            height: auto;
-            transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease;
-            cursor: default;
+    @media screen and (max-width: 1440px) {
+        font-size: 4rem;
+    }
 
-            @include mqmax(1440px) {
-                font-size: 4rem;
-            }
+    @media screen and (max-width: 1024px) {
+        font-size: 3.5rem;
+    }
 
-            @include mqmax(1024px) {
-                font-size: 3.5rem;
-            }
+    @media screen and (max-width: 768px) {
+        font-size: 2.7rem;
+    }
 
-            @include mqmax(768px) {
-                font-size: 2.7rem;
-            }
-
-            @include mqmax(625px) {
-                opacity: 0;
-            }
-
-        }
-
-        .active {
-            @include mqmax(625px) {
-                opacity: 1;
-            }
-
-            transition: color 1s ease,
-            transform 0.5s ease,
-            font-size 0.4s ease,
-            opacity 1s ease;
-        }
-
-        .image-container {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 60%;
-            height: 100%;
-            padding: 20px 20px 40px;
-            transition: opacity 1s ease;
-            opacity: 0;
-            @include flexbox(row);
-            justify-content: center;
-            align-items: center;
-
-            @include mqmax(625px) {
-                width: 100%;
-                top: -50px;
-            }
-
-            .image {
-                height: 70%;
-                width: 70%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
+    @media screen and (max-width: 625px) {
+        opacity: 0;
     }
 }
 
+.watch-name.is-active {
+    transition: color 1s ease, transform 0.5s ease, font-size 0.4s ease, opacity 1s ease;
 
+    @media screen and (max-width: 625px) {
+        opacity: 1;
+    }
+}
+
+.watch-image-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    padding: 20px 20px 40px;
+    transition: opacity 1s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 625px) {
+        width: 100%;
+        top: -50px;
+    }
+}
+
+.watch-image {
+    height: 70%;
+    width: 70%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+/* Footer */
 footer {
     height: 30px;
     position: fixed;
@@ -166,7 +146,7 @@ footer {
 
     p {
         font-weight: lighter;
-        color: $border-color;
+        color: $color-secondary;
     }
 
     a {
@@ -174,16 +154,18 @@ footer {
     }
 }
 
-
+/* Hide */
 .hide {
     display: none;
 }
 
+/* Landing Screen */
 #landing-screen {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    @include flexbox(column);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease;
@@ -194,19 +176,19 @@ footer {
         text-transform: uppercase;
         margin-bottom: 100px;
 
-        @include mqmax(1024px) {
+        @media screen and (max-width: 1024px) {
             font-size: 4rem;
         }
 
-        @include mqmax(768px) {
+        @media screen and (max-width: 768px) {
             font-size: 3.5rem;
         }
 
-        @include mqmax(625px) {
+        @media screen and (max-width: 625px) {
             font-size: 2.5rem;
         }
 
-        @include mqmax(420px) {
+        @media screen and (max-width: 420px) {
             font-size: 2rem;
         }
     }
@@ -214,33 +196,27 @@ footer {
     #mouse {
         width: 3rem;
         height: 5rem;
-        border: 0.3rem solid $text-color;
+        border: 0.3rem solid $color-primary;
         border-radius: 3rem;
         position: relative;
-
 
         #mousewheel {
             width: 0.9rem;
             height: 0.9rem;
-            background-color: $text-color;
+            background-color: $color-primary;
             border-radius: 50%;
             margin: auto;
             margin-top: 0.4rem;
             animation: mousewheelLoop 3s ease infinite;
         }
 
-    }
-
-    #arrow-down {
-        transform: rotate(90deg);
-        margin-top: 10px;
-        animation: blinking 2s ease infinite;
+        #arrow-down {
+            transform: rotate(90deg);
+            margin-top: 10px;
+            animation: blinking 2s ease infinite;
+        }
     }
 }
-
-
-
-
 
 @keyframes mousewheelLoop {
     0% {
@@ -255,8 +231,6 @@ footer {
         transform: translateY();
     }
 }
-
-
 
 @keyframes blinking {
     0% {
