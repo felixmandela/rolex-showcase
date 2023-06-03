@@ -1,4 +1,4 @@
-# ⌚ Rolex Showcase
+# Rolex Showcase ⌚
 
 ## 📝 Author
 Felix Mandela
