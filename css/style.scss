@@ -210,11 +210,13 @@ footer {
             animation: mousewheelLoop 3s ease infinite;
         }
 
-        #arrow-down {
-            transform: rotate(90deg);
-            margin-top: 10px;
-            animation: blinking 2s ease infinite;
-        }
+
+    }
+
+    #arrow-down {
+        transform: rotate(90deg);
+        margin-top: 10px;
+        animation: blinking 2s ease infinite;
     }
 }
 

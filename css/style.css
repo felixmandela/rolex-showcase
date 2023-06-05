@@ -212,7 +212,7 @@ footer a {
   margin-top: 0.4rem;
   animation: mousewheelLoop 3s ease infinite;
 }
-#landing-screen #mouse #arrow-down {
+#landing-screen #arrow-down {
   transform: rotate(90deg);
   margin-top: 10px;
   animation: blinking 2s ease infinite;
